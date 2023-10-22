@@ -19,10 +19,11 @@ new_people = {
     name: age * 2
     for name, age in people.items()
 }
-print(new_people)
+print(json.dumps(new_people,indent= 4))
+
 # In ra enumerate các key trong people dict
-print(list(enumerate(people)))
+new_lst = [k for k in people]
+print(list(enumerate(new_lst)))
 # Sử dụng hàm dict để biến enumerate bên trên trở thành dict
 new_people1 = dict(enumerate(people.keys()))
 print(json.dumps(new_people1, indent=4))
-    
